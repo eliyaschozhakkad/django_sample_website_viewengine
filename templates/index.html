@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+
+<div>
+  <h1 class="text-center">Welcome to the world of movies</h1>
+  <hr />
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Movie</th>
+        <th scope="col">Director</th>
+        <th scope="col">Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for f in films %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{f.movie_name}}</td>
+        <td>{{f.director}}</td>
+        <td>{{f.year}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<div class="actors m-5 p-5">
+  {% for a in actor %}
+  <div class="card m-3" style="width: 18rem">
+    <img src="{{a.actor_img.url}}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{a.actor_name}}</h5>
+      <p class="card-text">{{a.actor_desc}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
